@@ -34,10 +34,22 @@ void PrintArray(int[] array)
 
 int[] ReverseArray(int[] array)
 {
-    
-}
-int[] initArray = CreateArrayRndNum(6, 1, 10);
+    int tempVar = 0;
+    int length = array.Length;
+    for (int i = 0; i < length / 2; i++)
+    {
+        tempVar = array[i];
+        array[i] = array[length - 1 - i];
+        array[length - 1 - i] = tempVar;
 
+    }
+    return array;
+}
+
+
+int[] initArray = CreateArrayRndNum(6, 1, 10);
 PrintArray(initArray);
-Console.Write($" => [reversed array]");
+ReverseArray(initArray);
+Console.Write($" => ");
+PrintArray(initArray);
 

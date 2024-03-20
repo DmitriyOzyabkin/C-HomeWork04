@@ -4,6 +4,7 @@
 
 
 
+
 int[] CreateArrayRndNum(int size, int min, int max)
 {
     Random rnd = new Random();
